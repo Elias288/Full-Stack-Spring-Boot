@@ -1,6 +1,7 @@
 package com.livecoding.live.controllers;
 
 import com.livecoding.live.models.Usuario;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,9 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:5500/")
 public class UsuarioController {
 
     @RequestMapping(value = "usuarios")
+
     public List <Usuario> getUsuarios(){
         Usuario usuario = new Usuario();
 
